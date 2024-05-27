@@ -10,9 +10,9 @@ class Bird {
     };
     this.velocity = {
       x: 0,
-      y: 1,
+      y: 0.2, // Further reduced initial velocity
     };
-    this.acceleration = 0.2;
+    this.acceleration = 0.05; // Further reduced acceleration
     this.isDead = false;
     this.image = new Image();
     this.image.src = "./Images/frame-2.png";
@@ -39,7 +39,7 @@ class Bird {
     this.position.y += this.velocity.y;
   }
   jump() {
-    this.velocity.y = -2;
+    this.velocity.y = -1.5; // Further reduced jump velocity
   }
   update() {
     this.draw();
